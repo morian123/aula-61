@@ -6,7 +6,7 @@ import repeat from "../../assets/repeat.svg";
 export default function PlayerController(props) {
   return (
     <div className="flex justify-between items-center">
-      {!props.showControlButtons && (
+      {props.showControlButtons && (
         <>
           <img
             className="w-6 h-6"
@@ -24,12 +24,12 @@ export default function PlayerController(props) {
       )}
       <div
         className={`${
-          props.showControlButtons ? "w-12 h-12 p-3" : "w-20 h-20 p-6"
+          props.showControlButtons ? "w-20 h-20 p-6" : "w-12 h-12 p-3"
         } rounded-full bg-white flex items-center justify-center`}
       >
         <img className="w-full h-full" src={pause} alt="Ícone de pausar" />
       </div>
-      {!props.showControlButtons && (
+      {props.showControlButtons && (
         <>
           <div className="w-10 h-10 rounded-full bg-slate-900 p-2 flex items-center justify-center">
             <img

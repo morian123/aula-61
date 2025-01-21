@@ -7,32 +7,34 @@ export default function NowPlaying({ showProgressBar }) {
     <div
       className={`${
         showProgressBar
-          ? "flex flex-row items-center space-x-4 justify-between mt-6"
-          : "mt-6"
+          ? "mt-6"
+          : "flex flex-row items-center space-x-4 justify-between mt-6"
       }`}
     >
       <div
         className={`${
-          showProgressBar && "flex flex-row items-center space-x-4"
+          !showProgressBar && "flex flex-row items-center space-x-4"
         }`}
       >
         <img
-          className={`${!showProgressBar ? "rounded-3xl w-full mb-4" : "rounded-2xl w-16"}`}
+          className={`${
+            showProgressBar ? "rounded-3xl w-full mb-4" : "rounded-2xl w-16"
+          }`}
           src={icarus}
           alt="Music icon"
         />
         <div>
           <h2
-            className={`font-bold ${showProgressBar ? "text-base" : "text-xl"}`}
+            className={`font-bold ${showProgressBar ? "text-xl" : "text-base"}`}
           >
             Música de amor nunca mais
           </h2>
-          <h3 className={`${showProgressBar ? "text-sm" : "text-lg"}`}>
+          <h3 className={`${showProgressBar ? "text-lg" : "text-sm"}`}>
             BK, Luccas Carlos, Nansy Silvvz, Gigantes
           </h3>
         </div>
       </div>
-      {!showProgressBar && <ProgressBar />}
+      {showProgressBar && <ProgressBar />}
       <PlayerController showControlButtons={showProgressBar} />
     </div>
   );
