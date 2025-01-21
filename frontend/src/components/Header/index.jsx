@@ -3,7 +3,7 @@ import mixer from "../../assets/mixer.svg";
 
 export default function Header(props) {
   return (
-    <header className="flex justify-between items-center">
+    <header className="flex justify-between items-center mb-6">
       <button type="button" onClick={props.handleShowMusic}>
         <img src={arrowDown} alt="Arrow down icon" className="w-6 h-6" />
       </button>
