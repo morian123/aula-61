@@ -1,5 +1,5 @@
-import arrowDown from "../../assets/arrow-down.svg";
-import mixer from "../../assets/mixer.svg";
+import arrowDown from "../assets/arrow-down.svg";
+import mixer from "../assets/mixer.svg";
 
 export default function Header(props) {
   return (

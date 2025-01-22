@@ -1,7 +1,7 @@
-import shuffle from "../../assets/shuffle.svg";
-import skip from "../../assets/skip.svg";
-import pause from "../../assets/pause.svg";
-import repeat from "../../assets/repeat.svg";
+import shuffle from "../assets/shuffle.svg";
+import skip from "../assets/skip.svg";
+import pause from "../assets/pause.svg";
+import repeat from "../assets/repeat.svg";
 
 export default function PlayerController(props) {
   return (
@@ -31,7 +31,7 @@ export default function PlayerController(props) {
       </div>
       {props.showControlButtons && (
         <>
-          <div className="w-10 h-10 rounded-full bg-slate-900 p-2 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-full bg-slate-900 p-2 flex items-center justify-center rotate-180">
             <img
               className="w-full h-full"
               src={skip}
